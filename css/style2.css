@@ -1,0 +1,220 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+
+body {
+	background: url("../img/forest.png") no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	width: 100%;
+	height: auto;
+	min-width: 100vh;
+}
+
+.HUHU {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.p {
+	width: 60%;
+	height: 40%;
+	background: transparent;
+	border: 2px solid rgba(255, 255, 255, .5);
+	border-radius: 20px;
+	backdrop-filter: blur(20px);
+	box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+	color: aqua;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: justify;
+	font-weight: bold;
+	position: relative;
+}
+
+.opsi {
+	position: relative;
+	top: 30px;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid blue;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+	transition: .5s;
+	color:aqua
+}
+
+.submit-button {
+	position: relative;
+	top: 200px;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid blue;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+	transition: .5s;
+}
+
+.opsi:hover{
+	backdrop-filter: blur(20px);
+	color:white
+}
+
+.wrapper {
+	position: relative;
+	width: 400px;
+	height: 450px;
+	background: transparent;
+	border: 2px solid rgba(255, 255, 255, .5);
+	border-radius: 20px;
+	backdrop-filter: blur(20px);
+	box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+	display: flex;
+	justify-items: space;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	transform: scale(0);
+	transition: transform .5s ease, height .2s ease;
+	top: 30px;
+}
+
+.h2 {
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper.active-popup {
+	transform: scale(1);
+}
+
+.opsi1 {
+	position: relative;
+	top: 30px;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid blue;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+	transition: .5s;
+	color:aqua
+}
+
+.opsi2 {
+	position: relative;
+	top: 30px;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid blue;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+	transition: .5s;
+	color:aqua
+}
+
+.box-yes {
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	left: 80px;
+}
+
+.box-no {
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	right: 60px;
+}
+
+.opsi1:hover {
+	backdrop-filter: blur(20px);
+	color: white;
+}
+
+.wrapper .box-yes {
+	width: 100%;
+	padding: 40px;
+}
+
+.wrapper .box-yes{
+	width: 100%;
+	padding: 40px;
+}
+
+.box-no input:focus~label,
+.box-no input:valid~label {
+	top: -5px;
+}
+
+.box-yes input:focus~label,
+.box-yes input:valid~label {
+	top: -5px;
+}
+
+
+.wrapper.active .box-yes {
+	transition: transform .18s ease;
+	transform: translateX(0);
+}
+
+.wrapper.active .box-yes {
+	transition: transform .18s ease;
+	transform: translateX(-300px);
+}
+
+.wrapper .box-no {
+	transition: absolute;
+	transition: transform .16s ease;
+	transform: translateX(300px);
+}
+
+.wrapper.active .box-no {
+	transition: transform .16s ease;
+    transform: translateX(0);
+}
+
+.wrapper .box-no {
+	display: block;
+}
+
+@media screen and (max-width: 600px) {
+	.p {
+		width: 95%;
+	}
+
+	.wrapper {
+		width: 75%;
+	}
+}
